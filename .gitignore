@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+#cmake files
+src/CMakeFiles/*
+src/CMakeCache.txt
+
+#bin folder
+bin/*
