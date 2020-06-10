@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.1)
 project(intro)
 
 # add the executable
-add_executable(intro main.cpp)
+add_executable(intro src/main.cpp)
