@@ -1,6 +1,7 @@
 #include <iostream>
 #include "word.h"
 
+char validate_function_arg(char* fun);
 // essen -v -r
  int main(int argc, char* argv[]) {
 	if (argc < 2) {
@@ -9,7 +10,11 @@
 	}
 
 	std::string original(argv[1]);
-	char function = argv[2][0];
+	char function = validate_function_arg(argv[2]);
+	if (function == '\0') {
+		std::cout << "Error: the \"function\" argument is invalid\n";
+		return -1;
+	}
 
 	{
 		Word word(original, function, '0');
@@ -18,3 +23,9 @@
 	std::cout << "program completed\n";
 	return 0;
 }
+
+ char validate_function_arg(char* fun) {
+	 auto len = strlen(fun);
+	 if ((len != 2) || (fun[0] != '-')) return '\0';
+	 return fun[1];
+ }
