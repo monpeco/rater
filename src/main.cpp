@@ -1,10 +1,20 @@
 #include <iostream>
-using namespace std;
+#include "word.h"
 
-int main() {
-	cout << "this program is starting" << endl;
-	int tem = 5;
-	cout << tem << endl;
-	cout << "program completed";
+// essen -v -r
+ int main(int argc, char* argv[]) {
+	if (argc < 2) {
+		std::cout << "Error: please specify the word and the function (plus the modifier if required)\n";
+		return -1;
+	}
+
+	std::string original(argv[1]);
+	char function = argv[2][0];
+
+	{
+		Word word(original, function, '0');
+	}
+	
+	std::cout << "program completed\n";
 	return 0;
 }
