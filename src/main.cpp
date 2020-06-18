@@ -25,7 +25,7 @@ char validate_function_arg(char* fun);
 }
 
  char validate_function_arg(char* fun) {
-	 auto len = strlen(fun);
+	 int len = strlen(fun);
 	 if ((len != 2) || (fun[0] != '-')) return '\0';
 	 return fun[1];
  }
