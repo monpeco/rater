@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include "word.h"
 
 char validate_function_arg(char* fun);
