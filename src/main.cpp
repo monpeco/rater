@@ -5,7 +5,7 @@
 char validate_function_arg(char* fun);
 // essen -v -r
  int main(int argc, char* argv[]) {
-	if (argc < 2) {
+	if (argc < 3) {
 		std::cout << "Error: please specify the word and the function (plus the modifier if required)\n";
 		return -1;
 	}
