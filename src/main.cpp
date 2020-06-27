@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string.h>
+#include "common.h"
 #include "word.h"
+
 
 char validate_function_arg(char* fun);
 // essen -v -r
@@ -21,7 +23,7 @@ char validate_function_arg(char* fun);
 		Word word(original, function, '0');
 	}
 	
-	std::cout << "program completed\n";
+	cout_debug("program completed\n");
 	return 0;
 }
 
